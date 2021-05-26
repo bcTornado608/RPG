@@ -12,12 +12,18 @@ public class ItemManager
     {
         // read string
         string jsonStr = "";
-        TextAsset txt = Resources.Load<TextAsset>("Items/sampleJson.json");
+        TextAsset txt = Resources.Load<TextAsset>("Items/sampleJson");
+
         jsonStr = txt.ToString();
 
         // create json objects
         this.itemInfoCollection = JsonUtility.FromJson<ItemInfoCollection>(jsonStr);
-        
+
+        // test
+        foreach(ItemInfo info in this.itemInfoCollection.itemInfos)
+        {
+            Debug.Log(info.name);
+        }
     }
 
     public static void Init()
