@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,81 @@ using UnityEngine;
 [System.Serializable]
 public class Item
 {
-    string itemId;
-    int count;
+    string id;
 
-    Dictionary<string, string> stringTags;
+    int Count { get; set; }
 
+    Dictionary<string, string> tags;
+
+    public Item(string id, int count = 1)
+    {
+        this.id = id;
+        this.Count = count;
+        this.tags = new Dictionary<string, string>();
+    }
+
+    public string getID()
+    {
+        return this.id;
+    }
+
+    public string getTag(string tag)
+    {
+        if (this.tags.ContainsKey(tag))
+        {
+            return this.tags[tag];
+        }
+        else
+        {
+            ItemManager manager = ItemManager.Instance;
+            ItemInfo info = manager.getItemInfo(this.id);
+            if (info == null)
+            {
+                return null;
+            }
+            string tag_value = info.getTag(tag);
+            return tag_value;
+        }
+    }
+
+    public string getName()
+    {
+        return this.getTag("name");
+    }
+    public ItemCategory getCategory()
+    {
+        string categoryStr = this.getTag("category");
+        if (categoryStr == null)
+        {
+            throw new InventoryDataException(
+                string.Format("{0}: Item has no tag \"category\"",
+                this.ToString()));
+        }
+
+        ItemCategory? category = (ItemCategory?)Enum.Parse(typeof(ItemCategory), categoryStr, true);
+        if (category == null)
+        {
+            throw new InventoryDataException(string.Format(
+                "{0}: Unknown item category \"{1}\"",
+                this.ToString(), categoryStr));
+        }
+        return (ItemCategory)category;
+    }
+    public int getRarity()
+    {
+        string rarityStr = this.getTag("rarity");
+        return int.Parse(rarityStr);
+    }
+    public string getDescription()
+    {
+        return this.getTag("description");
+    }
+    public string getStory()
+    {
+        return this.getTag("story");
+    }
+    public string getIcon()
+    {
+        return this.getTag("icon");
+    }
 }

@@ -11,6 +11,20 @@ public class TestScript : MonoBehaviour
     {
         ItemManager.Init();
         itemManager = ItemManager.Instance;
+
+        ItemInfo info = itemManager.getItemInfo("test_item");
+        print(info);
+
+        print(info.getTag("name"));
+
+        Item item = new Item("test_item");
+        print(item.getID());
+        print(item.getName());
+        print(item.getCategory());
+        print(item.getRarity());
+        print(item.getDescription());
+        print(item.getStory());
+        print(item.getIcon());
     }
 
     // Update is called once per frame
