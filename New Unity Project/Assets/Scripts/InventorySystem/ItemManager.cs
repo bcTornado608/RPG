@@ -25,12 +25,15 @@ public class ItemManager
         {
             itemDictionary.Add(info.id, info);
         }
+    }
 
-        // test
-        foreach(ItemInfo info in itemDictionary.Values)
+    public ItemInfo getItemInfo(string id)
+    {
+        if(this.itemDictionary.ContainsKey(id))
         {
-            Debug.Log(info.name);
+            return this.itemDictionary[id].copy();
         }
+        return null;
     }
 
     public static void Init()
