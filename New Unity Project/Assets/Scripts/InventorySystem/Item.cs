@@ -44,6 +44,22 @@ public class Item
         }
     }
 
+    public void setTag(string key, string value){
+        if(value == null)
+        {
+            if(this.tags.ContainsKey(key)){
+                this.tags.Remove(key);
+            }
+        }
+        else if(this.tags.ContainsKey(key))
+        {
+            this.tags[key] = value;
+        }
+        else{
+            this.tags.Add(key, value);
+        }
+    }
+
     public string getName()
     {
         return this.getTag("name");
