@@ -11,7 +11,7 @@ public class Item
 
     int Count { get; set; }
 
-    Dictionary<string, string> tags;
+    SortedDictionary<string, string> tags;
 
     public Item(string id, int count = 1)
     {
@@ -23,7 +23,57 @@ public class Item
         }
 
         this.Count = count;
-        this.tags = new Dictionary<string, string>();
+        this.tags = new SortedDictionary<string, string>();
+    }
+
+    public bool isSameItem(Item other)
+    {
+        return this.id == other.id;
+    }
+
+    public override bool Equals(object other)
+    {
+        if (other == null || this.GetType() != other.GetType())
+        {
+            return false;
+        }
+
+        Item otherItem = (Item)other;
+        if (this.id != otherItem.id)
+        {
+            return false;
+        }
+
+        HashSet<string> keySet1 = new HashSet<string>();
+        foreach (string key in this.tags.Keys)
+        {
+            keySet1.Add(key);
+        }
+        HashSet<string> keySet2 = new HashSet<string>();
+        foreach (string key in otherItem.tags.Keys)
+        {
+            keySet2.Add(key);
+        }
+
+        if (!keySet1.SetEquals(keySet2))
+        {
+            return false;
+        }
+
+        foreach (string key in keySet1)
+        {
+            if (this.tags[key] != otherItem.tags[key])
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public override int GetHashCode()
+    {
+        return base.GetHashCode();
     }
 
     public string getID()

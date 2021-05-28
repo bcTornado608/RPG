@@ -25,6 +25,19 @@ public class TestScript : MonoBehaviour
         print(item.getDescription());
         print(item.getStory());
         print(item.getIcon());
+
+        // Item wrongitem = new Item("no_item_named_this");
+        Item item1 = new Item("test_item");
+        Item item2 = new Item("test_item");
+
+        item2.setTag("tag1", "helloworld");
+        item.setTag("tag1a", "helloworld");
+        item1.setTag("tag1a", "helloworld");
+        item2.setTag("tag123", "helloworld");
+
+        print(item1.isSameItem(item2));
+        print(item1.Equals(item2));
+        print(item1.Equals(item));
     }
 
     // Update is called once per frame

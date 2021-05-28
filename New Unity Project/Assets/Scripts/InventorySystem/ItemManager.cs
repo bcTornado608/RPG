@@ -6,7 +6,7 @@ public class ItemManager
 {
     public static ItemManager Instance { get; private set; }
 
-    private Dictionary<string, ItemInfo> itemDictionary;
+    private SortedDictionary<string, ItemInfo> itemDictionary;
 
     private ItemManager()
     {
@@ -20,7 +20,7 @@ public class ItemManager
         itemInfoCollection = JsonUtility.FromJson<ItemInfoCollection>(jsonStr);
 
         // build lookup table
-        itemDictionary = new Dictionary<string, ItemInfo>();
+        itemDictionary = new SortedDictionary<string, ItemInfo>();
         foreach(ItemInfo info in itemInfoCollection.itemInfos)
         {
             itemDictionary.Add(info.id, info);
