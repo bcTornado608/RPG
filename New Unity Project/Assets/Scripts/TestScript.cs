@@ -36,8 +36,8 @@ public class TestScript : MonoBehaviour
         item2.setTag("tag123", "helloworld");
 
         print(item1.isSameItem(item2));
-        print(item1.Equals(item2));
-        print(item1.Equals(item));
+        print(item1.stackableWith(item2));
+        print(item1.stackableWith(item));
     }
 
     // Update is called once per frame

@@ -31,7 +31,7 @@ public class Item
         return this.id == other.id;
     }
 
-    public override bool Equals(object other)
+    public bool stackableWith(object other)
     {
         if (other == null || this.GetType() != other.GetType())
         {
@@ -69,11 +69,6 @@ public class Item
         }
 
         return true;
-    }
-
-    public override int GetHashCode()
-    {
-        return base.GetHashCode();
     }
 
     public string getID()
