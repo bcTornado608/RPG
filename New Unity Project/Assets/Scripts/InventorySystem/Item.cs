@@ -16,6 +16,12 @@ public class Item
     public Item(string id, int count = 1)
     {
         this.id = id;
+
+        if (ItemManager.Instance.getItemInfo(this.id) == null)
+        {
+            throw new InventoryDataException(string.Format("Unknown Item ID: {0}", this.id));
+        }
+
         this.Count = count;
         this.tags = new Dictionary<string, string>();
     }
@@ -44,18 +50,21 @@ public class Item
         }
     }
 
-    public void setTag(string key, string value){
-        if(value == null)
+    public void setTag(string key, string value)
+    {
+        if (value == null)
         {
-            if(this.tags.ContainsKey(key)){
+            if (this.tags.ContainsKey(key))
+            {
                 this.tags.Remove(key);
             }
         }
-        else if(this.tags.ContainsKey(key))
+        else if (this.tags.ContainsKey(key))
         {
             this.tags[key] = value;
         }
-        else{
+        else
+        {
             this.tags.Add(key, value);
         }
     }
@@ -86,6 +95,11 @@ public class Item
     public int getRarity()
     {
         string rarityStr = this.getTag("rarity");
+        if (rarityStr == null)
+        {
+            throw new InventoryDataException(string.Format(
+                "{0}: Item has no tag \"rarity\"", this.ToString()));
+        }
         return int.Parse(rarityStr);
     }
     public string getDescription()
