@@ -1,0 +1,35 @@
+﻿{
+    "Weapons":
+    [
+        {
+            "ID": "Sample_Lance",
+            "Type": "Lance",
+            "Name": "Wyvern Lance",
+            "Damage": "100",
+            "DamageType":  "1",
+            "SA": "1",
+            "UltName": "Life Reap",
+            "UltDamage": "75%",
+            "UltDamageType": "1",
+            "UltMPCost": "40",
+            "UltStatus": "3",
+            "UltRecovery": "10%",
+            "UltBuff": "2"
+        },
+        {
+            "ID": "Sample_Staff",
+            "Type": "Staff",
+            "Name": "Wood Staff",
+            "Damage": "30",
+            "DamageType": "1",
+            "SA": "0",
+            "UltName": "Heavy Blow",
+            "UltDamage": "120%",
+            "UltDamageType": "1",
+            "UltMPCost": "20",
+            "UltStatus": "0",
+            "UltRecovery": "0",
+            "UltBuff": "2"
+        }
+    ]
+}
