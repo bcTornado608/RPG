@@ -3,14 +3,10 @@ using System.Collections;
 
 namespace AssemblyCSharp.Assets.Scripts.Battle
 {
-    public static class DamageCalc
+    public class mobsController : MonoBehaviour
     {
-        public static void Enemy()
-        {
 
-        }
-
-        public static void Ally()
+        public static void mobsAttack()
         {
 
         }

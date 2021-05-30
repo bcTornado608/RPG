@@ -1,0 +1,27 @@
+﻿{
+    "Armors": [
+        {
+            "ID": "Sample_Helmet",
+            "Name": "缠头带",
+            "Type": "Helmet",
+            "HP": "30",
+            "MP": "10",
+            "SA": "0"
+        },
+        {
+            "ID": "Sample_Plastron",
+            "Name": "大地之衣",
+            "Type": "Plastron",
+            "HP": "50",
+            "MP": "5",
+            "SA":  "1"
+        },
+        {
+            "ID": "Sample_Glove",
+            "Type": "布护腕",
+            "HP": "20",
+            "MP": "20",
+            "SA": "0"
+        }
+    ]
+} 
