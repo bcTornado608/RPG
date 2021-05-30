@@ -1,0 +1,19 @@
+﻿{
+    "Mobs":
+    [
+        {
+            "ID": "Sample_Mob1",
+            "HP": "50",
+            "PhysicalRes": "5",
+            "MagicRes": "10",
+            "Damage": "25"
+        },
+        {
+            "ID": "Sample_Mob2",
+            "HP": "50",
+            "PhysicalRes": "99",
+            "MagicRes": "0",
+            "Damage": "30"
+        }
+    ]
+} 

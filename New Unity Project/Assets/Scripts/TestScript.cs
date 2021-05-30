@@ -9,6 +9,7 @@ public class TestScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
         ItemManager.Init();
         itemManager = ItemManager.Instance;
 
@@ -38,6 +39,9 @@ public class TestScript : MonoBehaviour
         print(item1.isSameItem(item2));
         print(item1.stackableWith(item2));
         print(item1.stackableWith(item));
+=======
+        Debug.Log("started");
+>>>>>>> ad8e6f67d4f674f70ebd4aa83b2d1413a1b03cc9
     }
 
     // Update is called once per frame

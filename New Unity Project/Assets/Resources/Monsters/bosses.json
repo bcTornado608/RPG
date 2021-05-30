@@ -1,0 +1,31 @@
+﻿{
+    "Bosses":
+    [
+        {
+            "ID": "Sample_Boss1",
+            "HP": "500",
+            "PhysicalRes": "5",
+            "MagicRes": "10",
+            "Damage": "50",
+            "Target": "1",
+            "Ult1Name": "Whirlwind",
+            "Ult1Damage": "15",
+            "Ult1Target": "1",
+            "Ult1Status": "2",
+            "Ult1Buff": "0"
+        },
+        {
+            "ID": "Sample_Boss2",
+            "HP": "450",
+            "PhysicalRes": "99",
+            "MagicRes": "0",
+            "Damage": "45",
+            "Target": "1",
+            "Ult1Name": "Madness",
+            "Ult1Damage": "0",
+            "Ult1Target": "0",
+            "Ult1Status": "0",
+            "Ult1Buff": "3"
+        }
+    ]
+} 
