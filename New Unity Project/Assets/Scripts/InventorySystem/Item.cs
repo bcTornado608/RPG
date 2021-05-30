@@ -7,9 +7,9 @@ using UnityEngine;
 [System.Serializable]
 public class Item
 {
-    string id;
+    private string id;
 
-    int Count { get; set; }
+    public int Count { get; set; }
 
     SortedDictionary<string, string> tags;
 

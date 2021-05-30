@@ -1,4 +1,4 @@
-using System.Collections;
+using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -44,5 +44,12 @@ public class TestScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void writeFile(){
+        FileStream file = File.Create(Application.persistentDataPath + "/gamesave.save");
+        StreamWriter writer = new StreamWriter(file, System.Text.Encoding.UTF8);
+        writer.Write("Helloworld");
+        file.Close();
     }
 }
