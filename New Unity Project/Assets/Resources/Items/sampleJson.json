@@ -1,0 +1,22 @@
+{
+    "itemInfos": [
+        {
+            "id": "test_item",
+            "name": "Test Item",
+            "category": "special",
+            "rarity": "5",
+            "description": "An item for test purpose",
+            "story": "自盘古开天辟地以来，世界上诞生的第一个物品。虽然没什么用，甚至没有图标，但仍然具有纪念意义",
+            "icon": "None"
+        },
+        {
+            "id": "test_item2",
+            "name": "Test Item 2",
+            "category": "special",
+            "rarity": "4",
+            "description": "An item for test purpose",
+            "story": "自盘古开天辟地以来，世界上诞生的第二个物品。因为是第二个所以并没有第一个那么稀有。",
+            "icon": "None"
+        }
+    ]
+}
