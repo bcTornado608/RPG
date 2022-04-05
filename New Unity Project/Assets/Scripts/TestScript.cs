@@ -39,15 +39,8 @@ public class TestScript : MonoBehaviour
         print(item1.stackableWith(item2));
         print(item1.stackableWith(item));
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    void writeFile()
-    {
+  
+    void writeFile(){
         FileStream file = File.Create(Application.persistentDataPath + "/gamesave.save");
         StreamWriter writer = new StreamWriter(file, System.Text.Encoding.UTF8);
         writer.Write("Helloworld");
