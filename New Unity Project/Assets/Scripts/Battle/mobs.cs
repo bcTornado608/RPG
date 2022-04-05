@@ -1,17 +1,24 @@
 ﻿using UnityEngine;
 using System;
-
-[Serializable]
-public class mob
+namespace AssemblyCSharp.Assets.Scripts.Battle
 {
-    public string ID;
-    public int HP;
-    public int MagicRes;
-    public int Damage;
-}
+    [Serializable]
+    public class mob
+    {
+        public string ID;
+        public int HP;
+        public int MagicRes;
+        public int Damage;
 
-[Serializable]
-public class mobs
-{
-    public mob[] Mobs;
+        public mob copy()
+        {
+            return this.MemberwiseClone() as mob;
+        }
+    }
+
+    [Serializable]
+    public class mobs
+    {
+        public mob[] Mobs;
+    }
 }

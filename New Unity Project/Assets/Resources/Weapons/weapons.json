@@ -11,7 +11,7 @@
             "UltName": "Life Reap",
             "UltDamage": "75%",
             "UltDamageType": "1",
-            "UltMPCost": "40",
+            "UltChance": "30%"
             "UltStatus": "3",
             "UltRecovery": "10%",
             "UltBuff": "2"
@@ -26,7 +26,7 @@
             "UltName": "Heavy Blow",
             "UltDamage": "120%",
             "UltDamageType": "1",
-            "UltMPCost": "20",
+            "UltChance": "40%"
             "UltStatus": "0",
             "UltRecovery": "0",
             "UltBuff": "2"

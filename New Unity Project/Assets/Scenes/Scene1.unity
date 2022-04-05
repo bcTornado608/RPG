@@ -6600,6 +6600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1910864797}
   - component: {fileID: 1910864796}
+  - component: {fileID: 1910864798}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -6622,6 +6623,7 @@ MonoBehaviour:
   jsonWeapons: {fileID: 4900000, guid: 08d06b21e83d24a149ef56b0ca476cde, type: 3}
   jsonMobs: {fileID: 4900000, guid: bd1ddd4f2376f4e3591d7a78c40c8882, type: 3}
   jsonBosses: {fileID: 4900000, guid: f02af558b992b4064b1f5660150911fd, type: 3}
+  jsonArmors: {fileID: 4900000, guid: 4ac0b88ff74f64b6ea1405eff14715e9, type: 3}
 --- !u!4 &1910864797
 Transform:
   m_ObjectHideFlags: 0
@@ -6636,3 +6638,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1910864798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910864795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007398bfb36a45f394535d05c71ebad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
