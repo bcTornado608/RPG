@@ -14,7 +14,7 @@ namespace AssemblyCSharp.Assets.Scripts.Battle
         public string UltName;
         public double UltDamage;
         public int UltDamageType;
-        public int UltMPCost;
+        public double UltChance;
         public int UltStatus;
         public double UltRecovery;
         public int UltBuff;

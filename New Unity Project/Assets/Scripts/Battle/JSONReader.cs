@@ -24,6 +24,7 @@ namespace AssemblyCSharp.Assets.Scripts.Battle
             foreach (weapon a in weaponsInJson.Weapons)
             {
                 weaponDict.Add(a.ID, a);
+                Debug.Log(a.ID);
             }
 
             // get mobs info
